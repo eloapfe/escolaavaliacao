@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades da Turma</title>
+    <link rel="shortcut icon" href="./assets/icon.png" >
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="tituloTurma"></h1>
+            <div class="user-info">
+                <button onclick="voltar()" class="btn-secondary">Voltar</button>
+                <button onclick="logout()" class="btn-secondary">Sair</button>
+            </div>
+        </header>
+
+        <div class="actions">
+            <button onclick="abrirCadastroAtividade()" class="btn-primary">Cadastrar Atividade</button>
+        </div>
+
+        <section class="atividades-section">
+            <h2>Atividades da Turma</h2>
+            <div id="listaAtividades" class="atividades-list">
+            </div>
+        </section>
+    </div>
+
+    <div id="cadastroAtividadeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharCadastroAtividade()">&times;</span>
+            <h2>Cadastrar Nova Atividade</h2>
+            <form id="cadastroAtividadeForm">
+                <div class="input-group">
+                    <label for="tituloAtividade">Título:</label>
+                    <input type="text" id="tituloAtividade" name="titulo" required>
+                </div>
+                <div class="input-group">
+                    <label for="descricaoAtividade">Descrição:</label>
+                    <textarea id="descricaoAtividade" name="descricao"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="dataEntrega">Data de Entrega:</label>
+                    <input type="date" id="dataEntrega" name="data_entrega">
+                </div>
+                <button type="submit" class="btn-primary">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/script3.js"></script>
+</body>
+</html>

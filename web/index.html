@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Professor</title>
+    <link rel="shortcut icon" href="./assets/icon.png" >
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Sistema de Turmas</h1>
+            <h2>Login do Professor</h2>
+            
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+                
+                <button type="submit" class="btn-primary">Entrar</button>
+            </form>
+            
+            <p class="register-link">
+                Não tem conta? <a href="#" onclick="mostrarRegistro()">Registre-se</a>
+            </p>
+        </div>
+
+        <div id="registroModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="fecharRegistro()">&times;</span>
+                <h2>Registrar Professor</h2>
+                <form id="registroForm">
+                    <div class="input-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="emailRegistro">E-mail:</label>
+                        <input type="email" id="emailRegistro" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="senhaRegistro">Senha:</label>
+                        <input type="password" id="senhaRegistro" name="senha" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Registrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

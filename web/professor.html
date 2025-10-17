@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Professor</title>
+    <link rel="shortcut icon" href="./assets/icon.png" >
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Painel do Professor</h1>
+            <div class="user-info">
+                <span id="professorNome"></span>
+                <button onclick="logout()" class="btn-secondary">Sair</button>
+            </div>
+        </header>
+
+        <div class="actions">
+            <button onclick="abrirCadastroTurma()" class="btn-primary">Cadastrar Turma</button>
+        </div>
+
+        <section class="turmas-section">
+            <h2>Minhas Turmas</h2>
+            <div id="listaTurmas" class="turmas-grid">
+            </div>
+        </section>
+    </div>
+
+    <div id="cadastroTurmaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharCadastroTurma()">&times;</span>
+            <h2>Cadastrar Nova Turma</h2>
+            <form id="cadastroTurmaForm">
+                <div class="input-group">
+                    <label for="nomeTurma">Nome da Turma:</label>
+                    <input type="text" id="nomeTurma" name="nome_turma" required>
+                </div>
+                <div class="input-group">
+                    <label for="descricaoTurma">Descrição:</label>
+                    <textarea id="descricaoTurma" name="descricao"></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/script2.js"></script>
+</body>
+</html>
